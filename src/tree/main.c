@@ -3,5 +3,5 @@
 #include <stdlib.h>
 int main()
 {
-    BTNode *tree = (BTNode *)malloc(sizeof(BTNode));
+    BTNode *tree = createTree();
 }
