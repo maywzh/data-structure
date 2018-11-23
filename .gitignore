@@ -156,4 +156,4 @@ $RECYCLE.BIN/
 .nfs*
 
 # binary
-*/main
+main
