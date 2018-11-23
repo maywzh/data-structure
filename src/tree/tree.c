@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "bstree.h"
+#include "tree.h"
 
 /*
  * get the depth of tree
@@ -15,7 +15,7 @@
  *               -1，表示该节点是它的父结点的左孩子;
  *                1，表示该节点是它的父结点的右孩子。
  */
-int getDepth(BSNode *p){
+int getDepth(BTNode *p){
     int LD, RD;
     if (p ==NULL)
         return 0;
