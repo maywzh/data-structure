@@ -25,7 +25,7 @@
         "-std=c11",
         "-g",
         "-o",
-        "main"
+        "src/tree/main"
       ],
       "presentation": {
         "echo": true,

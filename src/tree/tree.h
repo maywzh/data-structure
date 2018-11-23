@@ -12,7 +12,7 @@ typedef struct BTNode
 
 BTree createTree(BTree);
 
-void printTreeProc(BTree*, int);
+void printTreeProc(BTree, int);
 // 获得树的高度
 int getDepth(BTNode *);
 

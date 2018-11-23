@@ -28,7 +28,6 @@ BTree createTree(BTree tree)
     return tree;
 }
 
-
 int getDepth(BTNode *p)
 {
     int LD, RD;
@@ -43,15 +42,15 @@ int getDepth(BTNode *p)
     return 0;
 }
 
-void printTreeProc(BTree *tree, int layer)
+void printTreeProc(BTree tree, int layer)
 {
-    if (*tree == NULL)
+    if (tree == NULL)
         return;
-    printTreeProc(&(*tree)->rchild, layer + 1);
+    printTreeProc(tree->rchild, layer + 1);
     for (int i = 0; i < layer; i++)
     {
         printf(" ");
     }
-    printf("%c", &(*tree)->data);
-    printTreeProc(&(*tree)->lchild, layer + 1);
+    printf("%c", tree->data);
+    printTreeProc(tree->lchild, layer + 1);
 }

@@ -5,4 +5,5 @@ int main()
 {
     BTree root;
     BTNode *tree = createTree(root);
+    printTreeProc(tree, 0);
 }
