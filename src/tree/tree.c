@@ -9,28 +9,26 @@
 #include <stdlib.h>
 #include "tree.h"
 
-BTNode *createTree()
+BTree createTree(BTree tree)
 { // 先序递归创建二叉树
-    char ch = getchar();
-    BTNode *Node = (BTNode *)malloc(sizeof(BTNode));
+    char ch;
+    scanf("%c", &ch);
     if (ch == '#')
     {
-        free(Node);
-        Node = NULL;
+        tree = NULL;
     }
     else
     {
-        Node->data = ch;
-        Node->lchild = createTree();
-        Node->rchild = createTree();
+        BTNode *Node = (BTNode *)malloc(sizeof(BTNode));
+        tree = (BTree)malloc(sizeof(BTNode));
+        tree->data = ch;
+        createTree(tree->lchild);
+        createTree(tree->rchild);
     }
-    return Node;
+    return tree;
 }
-/* get the depth of tree
- * p          -- 根结点
- *               -1，表示该节点是它的父结点的左孩子;
- *                1，表示该节点是它的父结点的右孩子。
- */
+
+
 int getDepth(BTNode *p)
 {
     int LD, RD;

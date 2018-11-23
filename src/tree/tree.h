@@ -10,9 +10,10 @@ typedef struct BTNode
     struct BTNode *rchild; // 右孩子
 } BTNode, *BTree;
 
-BTNode *createTree();
+BTree createTree(BTree);
 
 void printTreeProc(BTree*, int);
 // 获得树的高度
 int getDepth(BTNode *);
+
 #endif

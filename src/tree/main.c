@@ -3,5 +3,6 @@
 #include <stdlib.h>
 int main()
 {
-    BTNode *tree = createTree();
+    BTree root;
+    BTNode *tree = createTree(root);
 }
