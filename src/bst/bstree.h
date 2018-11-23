@@ -44,4 +44,5 @@ void destroy_bstree(BSTree tree);
 // 打印二叉树
 void print_bstree(BSTree tree, Type key, int direction);
 
+// int getDepth(BSTree *t);
 #endif

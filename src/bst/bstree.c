@@ -326,3 +326,21 @@ void print_bstree(BSTree tree, Type key, int direction)
         print_bstree(tree->right, tree->key, 1);
     }
 }
+
+// /*
+//  * get the depth of tree
+//  * p          -- 根结点
+//  *               -1，表示该节点是它的父结点的左孩子;
+//  *                1，表示该节点是它的父结点的右孩子。
+//  */
+// int getDepth(BSTree *p){
+//     int LD, RD;
+//     if (p ==NULL)
+//         return 0;
+//     else{
+//         LD = getDepth(p->left);
+//         RD = getDepth(p->right);
+//         return (LD > RD ? LD : RD) + 1;
+//     }
+//     return 0;
+// }
