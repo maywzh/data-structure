@@ -1,4 +1,4 @@
-DIR=./src
+DIR=./
  
 #在源码所在目录下生成可执行文件main
 BIN=$(DIR)/main
@@ -6,10 +6,7 @@ BIN=$(DIR)/main
 SHARE=--share
  
 #显示所有编译警告，并指示公共头文件(静态库和动态库的头文件)所在目录
-CFLAG= -Wall -I../inc
- 
-#在../lib目录中链接两个外部库文件
-LFLAG=-L../lib -ldynamic_test -lstatic_test
+CFLAG= -Wall
  
 CC=gcc -o
  
@@ -32,10 +29,14 @@ $(BIN):$(OBJ)
  
 #编译命令
 $(DIR)/%.o:$(DIR)/%.c
-	$(CC) $@ -c $< $(CFLAG)
+	$(CO) $@ -c $< $(CFLAG)
  
  
 #清除无用文件
-.PHONY:clean
+.PHONY: test clean
+
+test:
+	./main
+
 clean:
 	rm $(OBJ) $(BIN)
