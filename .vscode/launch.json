@@ -11,7 +11,7 @@
       "program": "${workspaceFolder}/src/tree/main",
       "args": [],
       "stopAtEntry": true,
-      "cwd": "${workspaceFolder}",
+      "cwd": "${workspaceFolder}/src/tree/",
       "environment": [],
       "externalConsole": true,
       "MIMode": "lldb",
