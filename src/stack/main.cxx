@@ -1,15 +1,35 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "sqstack.h"
+//例3-1
+int match(char *exp, int n)
+{
+    char stack[100];
+    int top = -1;
+    for (int i = 0; i < n; i++)
+    {
+        if (exp[i] == '(')
+        {
+            stack[++top] = '(';
+            printf("push( ");
+        }
+        if (exp[i] == ')')
+        {
+            if (top < 0)
+                return 0;
+            else
+            {
+                printf("pop) ");
+                --top;
+            }
+        }
+    }
+    return top == -1 ? 1 : 0;
+}
+
 int main()
 {
-    int x = 1, y = 2;
-    SqStack st;
-    initStack(st);
-    push(st, x);
-    push(st, y);
-    pop(st, x);
-    printf("%d", x);
-    pop(st, x);
-    printf("%d", x);
+    char exp[] = "((()))())";
+    int a = match(exp, 13);
+    printf("%d", a);
 }

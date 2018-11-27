@@ -16,6 +16,19 @@
       "externalConsole": true,
       "MIMode": "lldb",
       "preLaunchTask": "c"
+    },
+    {
+      "name": "launch-stack",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/stack/main",
+      "args": [],
+      "stopAtEntry": true,
+      "cwd": "${workspaceFolder}/src/stack/",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "lldb",
+      "preLaunchTask": "cxx-stack"
     }
   ]
 }

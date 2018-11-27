@@ -17,6 +17,7 @@ int push(SqStack &st, int &x)
     if (st.top == 100 - 1)
         return 0;
     st.data[++st.top] = x;
+    return 1;
 }
 
 int pop(SqStack &st, int &x)

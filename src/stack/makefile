@@ -6,7 +6,7 @@ BIN=$(DIR)/main
 SHARE=--share
  
 #显示所有编译警告，并指示公共头文件(静态库和动态库的头文件)所在目录
-CFLAG= -Wall
+CFLAG= -Wall -g
  
 CC=g++ -o
  
