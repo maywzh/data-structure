@@ -26,7 +26,40 @@ int match(char *exp, int n)
     }
     return top == -1 ? 1 : 0;
 }
+int op(int a, char Op, int b)
+{
+    if (Op == '+')
+        return a + b;
+    else if (Op == '-')
+        return a - b;
+    else if (Op == 'x')
+        return a * b;
+    else if (Op == '/')
+        return b != 0 ? a / b : 0;
+    else
+        return 0;
+}
 
+int com(char *exp)
+{
+    int i, a, b, c;
+    int stack[MAXSIZE], top = -1;
+    char Op;
+    for (i = 0; exp[i] != '\0'; ++i)
+    {
+        if (exp[i] >= '0' && exp[i] <= '9')
+            stack[++top] = exp[i] - '0';
+        else
+        {
+            Op = exp[i];
+            a = stack[top--];
+            b = stack[top--];
+            c = op(a, Op, b);
+            stack[++top] = c;
+        }
+    }
+    return stack[top];
+}
 int main()
 {
     char exp[] = "((()))())";
