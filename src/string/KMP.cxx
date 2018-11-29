@@ -17,6 +17,25 @@ void getnext(String substr, int next[])
             j = next[j];
     }
 }
+int getnextval(String substr, int nextval[])
+{
+    int i = 1, j = 0;
+    nextval[1] = 0;
+    while (i < substr.length)
+    {
+        if (j == 0 || substr.ch[i] == substr.ch[j])
+        {
+            ++i;
+            ++j;
+            if (substr.ch[i] != substr.ch[j])
+                nextval[i] = j;
+            else
+                nextval[i] = nextval[j]; // j = next[j]; nextval[i]=nextval[j];
+        }
+        else
+            j = nextval[j];
+    }
+}
 
 int KMP(String str, String substr, int next[])
 {
