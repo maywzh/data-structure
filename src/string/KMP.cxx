@@ -18,7 +18,7 @@ void getnext(String substr, int next[])
     }
 }
 
-int KMP(String str, Str substr, int next[])
+int KMP(String str, String substr, int next[])
 {
     int i = 1, j = 1;
     while (i <= str.length && j <= substr.length)
