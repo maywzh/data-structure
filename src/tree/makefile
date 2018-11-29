@@ -6,9 +6,9 @@ BIN=$(DIR)/main
 SHARE=--share
  
 #显示所有编译警告，并指示公共头文件(静态库和动态库的头文件)所在目录
-CFLAG= -Wall
+CFLAG= -Wall -g
  
-CC=gcc -o
+CC=g++ -o
  
 AR=ar -cr
  
@@ -19,8 +19,8 @@ CO=$(CC)
 #-------------------------以下为通用不变区域-----------------------
  
 #SRC指的是指定目录下的所有.c文件名，OBJ指的是指定目录下的所有.o文件名
-SRC=$(wildcard $(DIR)/*.c)
-OBJ=$(patsubst %.c, %.o, $(SRC))
+SRC=$(wildcard $(DIR)/*.cxx)
+OBJ=$(patsubst %.cxx, %.o, $(SRC))
  
 #链接命令
 all:$(BIN)
@@ -28,7 +28,7 @@ $(BIN):$(OBJ)
 	$(CO) $@ $^ $(LFLAG)
  
 #编译命令
-$(DIR)/%.o:$(DIR)/%.c
+$(DIR)/%.o:$(DIR)/%.cxx
 	$(CO) $@ -c $< $(CFLAG)
  
  
