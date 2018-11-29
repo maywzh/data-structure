@@ -28,6 +28,44 @@ BTree createTree(BTree tree)
     return tree;
 }
 
+void Visit_Node(BTNode *node)
+{
+    printf("%d, ", node->data);
+}
+
+void inorder(BTNode *p)
+{
+    if (p != NULL)
+    {
+        inorder(p->lchild);
+        Visit_Node(p);
+        inorder(p->rchild);
+    }
+}
+void preorder(BTNode *p)
+{
+    if (p != NULL)
+    {
+        Visit_Node(p);
+        inorder(p->lchild);
+        inorder(p->rchild);
+    }
+}
+void postorder(BTNode *p)
+{
+    if (p != NULL)
+    {
+        inorder(p->lchild);
+        inorder(p->rchild);
+        Visit_Node(p);
+    }
+}
+
+void leveltravel(BTNode *p)
+{
+
+}
+
 int getDepth(BTNode *p)
 {
     int LD, RD;

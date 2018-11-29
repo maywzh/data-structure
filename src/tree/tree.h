@@ -12,6 +12,13 @@ typedef struct BTNode
 
 BTree createTree(BTree);
 
+void Visit_Node(BTNode *);
+void inorder(BTNode *);
+void preorder(BTNode *);
+void postorder(BTNode *);
+
+void leveltravel(BTNode *);
+
 void printTreeProc(BTree, int);
 // 获得树的高度
 int getDepth(BTNode *);
