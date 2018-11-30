@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "tree.h"
+#define MAXSIZE 100
 
 BTree createTree(BTree tree)
 { // 先序递归创建二叉树
@@ -63,7 +64,78 @@ void postorder(BTNode *p)
 
 void leveltravel(BTNode *p)
 {
+    int front = 0, rear = 0;
+    BTNode *que[MAXSIZE];
+    BTNode *q;
+    if (p != NULL)
+    {
+        rear = (rear + 1) % MAXSIZE;
+        que[rear] = p;
+        while (front != rear)
+        {
+            front = (front + 1) % MAXSIZE;
+            q = que[front];
+            Visit_Node(q);
+            if (q->lchild != NULL)
+            {
+                rear = (rear + 1) % MAXSIZE;
+                que[rear] = p->lchild;
+            }
+            if (q->rchild != NULL)
+            {
+                rear = (rear + 1) % MAXSIZE;
+                que[rear] = p->rchild;
+            }
+        }
+    }
+}
 
+void preorderNonrecursion(BTNode *bt)
+{
+    if (bt != NULL)
+    {
+        BTNode *stack[MAXSIZE];
+        int top = -1;
+        BTNode *p;
+        stack[++top] = bt;
+        while (top >= 0)
+        {
+            p = stack[top--];
+            Visit_Node(p);
+            if (p->lchild)
+            {
+                stack[++top] = p->lchild;
+            }
+            if (p->rchild)
+            {
+                stack[++top] = p->rchild;
+            }
+        }
+    }
+}
+
+void inorderNonrecursion(BTNode *bt)
+{
+    if (bt != NULL)
+    {
+        BTNode *stack[MAXSIZE];
+        int top = -1;
+        BTNode *p;
+        stack[++top] = bt;
+        while (top >= 0)
+        {
+            p = stack[top--];
+            Visit_Node(p);
+            if (p->lchild)
+            {
+                stack[++top] = p->lchild;
+            }
+            if (p->rchild)
+            {
+                stack[++top] = p->rchild;
+            }
+        }
+    }
 }
 
 int getDepth(BTNode *p)

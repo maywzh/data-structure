@@ -19,6 +19,8 @@ void postorder(BTNode *);
 
 void leveltravel(BTNode *);
 
+void preorderNonrecursion(BTNode *);
+
 void printTreeProc(BTree, int);
 // 获得树的高度
 int getDepth(BTNode *);
