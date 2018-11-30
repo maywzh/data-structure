@@ -31,3 +31,15 @@ void createInThread(TBTNode *root)
         pre->rtag = 1; // 处理最后一个俄节点
     }
 }
+
+TBTNode *First(TBTNode *p)
+{
+    while (p->ltag == 0)
+        p = p->lchild;
+    return p;
+}
+
+TBTNode *Next(TBTNode *p)
+{
+    return p->rtag == 0 ?
+}
