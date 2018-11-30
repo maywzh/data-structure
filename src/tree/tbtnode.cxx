@@ -7,7 +7,7 @@ void Visit_Node(TBTNode *p)
     printf("%d ", p->data);
 }
 
-void InThread(TBTNode *p, TBTNode *&pre
+void InThread(TBTNode *p, TBTNode *&pre)
 {
     if (p != NULL)
     {
