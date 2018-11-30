@@ -57,3 +57,30 @@ void inOrder(TBTNode *root)
         Visit_Node(p);
     }
 }
+
+void preThread(TBTNode *p, TBTNode *&pre)
+{
+    if (p != NULL)
+    {
+        if (p->lchild == NULL)
+        {
+            p->ltag = 1;
+            p->lchild = pre;
+        }
+        if (pre != NULL && pre->rchild == NULL)
+        {
+            pre->rtag = 1;
+            pre->rchild = p;
+        }
+        pre = p;
+        if (p->ltag == 0)
+            preThread(p->lchild, pre);
+        if (p->rtag == 0)
+            preThread(p->rchild, pre);
+    }
+}
+
+void preOrder(TBTNode *root)
+{
+    
+}
