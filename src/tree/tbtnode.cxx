@@ -1,7 +1,13 @@
 #include "tbtnode.h"
 #include <stdlib.h>
+#include <stdio.h>
 
-void InThread(TBTNode *p, TBTNode *&pre)
+void Visit_Node(TBTNode *p)
+{
+    printf("%d ", p->data);
+}
+
+void InThread(TBTNode *p, TBTNode *&pre
 {
     if (p != NULL)
     {
@@ -41,5 +47,13 @@ TBTNode *First(TBTNode *p)
 
 TBTNode *Next(TBTNode *p)
 {
-    return p->rtag == 0 ?
+    return p->rtag == 0 ? First(p->rchild) : p->rchild; //右子树的最左节点 或者 直接后继
+}
+
+void inOrder(TBTNode *root)
+{
+    for (TBTNode *p = First(root); p != NULL; p = Next(p))
+    {
+        Visit_Node(p);
+    }
 }

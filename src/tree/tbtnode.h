@@ -11,8 +11,14 @@ typedef struct TBTNode
     struct TBTNode *rchild; // 右孩子
 } TBTNode;
 
-void InThreaad(TBTNode *, TBTNode *&);
+void Visit_Node(TBTNode *);
 
+void createInThread(TBTNode *);
 
+TBTNode *First(TBTNode *);
+
+TBTNode *Next(TBTNode *);
+
+void inOrder(TBTNode *);
 
 #endif
