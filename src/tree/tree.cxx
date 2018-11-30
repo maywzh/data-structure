@@ -97,7 +97,7 @@ void preorderNonrecursion(BTNode *bt)
         BTNode *stack[MAXSIZE];
         int top = -1;
         BTNode *p;
-        stack[++top] = bt;
+        stack[++top] = bt; // 根节点入栈
         while (top >= 0)
         {
             p = stack[top--];
@@ -121,18 +121,19 @@ void inorderNonrecursion(BTNode *bt)
         BTNode *stack[MAXSIZE];
         int top = -1;
         BTNode *p;
-        stack[++top] = bt;
-        while (top >= 0)
+        p = bt;
+        while (top != -1 || p != NULL)
         {
-            p = stack[top--];
-            Visit_Node(p);
-            if (p->lchild)
+            while (p != NULL)
             {
-                stack[++top] = p->lchild;
+                stack[++top] = p;
+                p = p->lchild;
             }
-            if (p->rchild)
+            if (top != -1)
             {
-                stack[++top] = p->rchild;
+                p = stack[top--];
+                Visit_Node(p);
+                p = p->rchild;
             }
         }
     }
