@@ -10,7 +10,7 @@
 #include "tree.h"
 #define MAXSIZE 100
 
-BTree createTree(BTree tree)
+BTNode *createTree(BTNode *tree)
 { // 先序递归创建二叉树
     char ch;
     scanf("%c", &ch);
@@ -21,7 +21,7 @@ BTree createTree(BTree tree)
     else
     {
         BTNode *Node = (BTNode *)malloc(sizeof(BTNode));
-        tree = (BTree)malloc(sizeof(BTNode));
+        tree = (BTNode *)malloc(sizeof(BTNode));
         tree->data = ch;
         createTree(tree->lchild);
         createTree(tree->rchild);
