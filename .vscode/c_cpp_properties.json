@@ -2,10 +2,10 @@
   "configurations": [
     {
       "name": "Mac",
-      "includePath": ["/usr/include", "/usr/local/include", "${workspaceRoot}"],
+      "includePath": ["/usr/include", "/usr/local/include", "${workspaceRoot}/src/*"],
       "defines": [],
       "browse": {
-        "path": ["/usr/include", "/usr/local/include", "${workspaceRoot}"],
+        "path": ["/usr/include", "/usr/local/include", "${workspaceRoot}/src/*"],
         "limitSymbolsToIncludedHeaders": true,
         "databaseFilename": ""
       },
