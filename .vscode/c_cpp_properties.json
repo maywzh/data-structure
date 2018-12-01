@@ -54,19 +54,27 @@
     {
       "name": "Win32",
       "includePath": [
-        "C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/include",
-        "${workspaceRoot}"
+        "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/include",
+        "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/include/*",
+        "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include",
+        "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/*",
+        "${workspaceRoot}/src/*"
       ],
-      "defines": ["_DEBUG", "UNICODE"],
-      "intelliSenseMode": "msvc-x64",
+      "defines": ["_DEBUG", "UNICODE", "_UNICODE"],
+      "intelliSenseMode": "gcc-x64",
       "browse": {
         "path": [
-          "C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/include/*",
-          "${workspaceRoot}"
+          "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/include",
+          "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/include/*",
+          "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include",
+          "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/*",
+          "${workspaceRoot}/src/*"
         ],
         "limitSymbolsToIncludedHeaders": true,
         "databaseFilename": ""
-      }
+      },
+      "cStandard": "c11",
+      "cppStandard": "c++17"
     }
   ],
   "version": 4
