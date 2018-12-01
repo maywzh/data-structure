@@ -5,7 +5,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "c Launch",
+      "name": "launch-tree",
       "type": "cppdbg",
       "request": "launch",
       "program": "${workspaceFolder}/src/tree/main",

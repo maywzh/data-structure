@@ -4,7 +4,37 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "make",
+      "label": "make-all",
+      "command": "make",
+      "type": "process",
+      "args": ["-i"],
+      "problemMatcher": "$gcc",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "clear": false,
+        "showReuseMessage": true
+      }
+    },
+    {
+      "label": "make clean-all",
+      "command": "make",
+      "type": "process",
+      "args": ["clean", "-i"],
+      "problemMatcher": "$gcc",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "clear": false,
+        "showReuseMessage": true
+      }
+    },
+    {
+      "label": "make-stack",
       "options": { "cwd": "src/stack" },
       "command": "make",
       "type": "shell",
@@ -18,17 +48,24 @@
       }
     },
     {
-      "label": "c",
+      "label": "make-tree",
+      "options": { "cwd": "src/tree" },
+      "command": "make",
+      "type": "shell",
+      "args": [],
+      "problemMatcher": "$gcc",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "cxx-tree",
       "command": "gcc",
       "type": "shell",
-      "args": [
-        "src/tree/main.c",
-        "src/tree/tree.c",
-        "-std=c11",
-        "-g",
-        "-o",
-        "src/tree/main"
-      ],
+      "args": ["src/tree/*.cxx", "-std=c11", "-g", "-o", "src/tree/main"],
       "presentation": {
         "echo": true,
         "reveal": "always",
