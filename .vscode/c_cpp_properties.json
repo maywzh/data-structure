@@ -30,7 +30,7 @@
         "/usr/include",
         "${workspaceRoot}",
         "/usr/include/glib-2.0",
-        "${workspaceRoot}/src/lib",
+        "${workspaceRoot}/src/*",
         "${workspaceRoot}/build/src/lib",
         "${workspaceRoot}/build/"
       ],
