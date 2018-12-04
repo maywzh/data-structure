@@ -18,5 +18,5 @@ typedef struct AGraph
     int n, e;
 } AGraph;
 
-void VNode_Visit(int);
+void Visit_Node(int);
 #endif
