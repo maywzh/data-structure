@@ -137,3 +137,8 @@ void bfs(AGraph *g)
         if (visit[i] == 0)
             BFS(g, i, visit);
 }
+
+void Prim(MGraph &g, int v0, int &sum)
+{
+    
+}
