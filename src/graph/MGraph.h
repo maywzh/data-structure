@@ -13,4 +13,6 @@ typedef struct
     int n, e;  // 顶点数 边数
     VertexType vex[MAXSIZE];  //顶点信息数组
 } MGraph;
+
+
 #endif

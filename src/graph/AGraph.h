@@ -19,4 +19,5 @@ typedef struct AGraph
 } AGraph;
 
 void Visit_Node(int);
+void printAG(AGraph *);
 #endif
