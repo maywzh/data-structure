@@ -1,5 +1,6 @@
 #include "MGraph.h"
 #include "mintree.h"
+#include "../sort/sort.h"
 #include <stdlib.h>
 
 void Prim(MGraph &g, int v0, int &sum)
@@ -43,6 +44,38 @@ int getRoot(int a)
 
     while (a != v[a])
         a = v[a];
+    return a;
+}
+
+void sort(Road *roads, int low, int high)
+{
+    int temp;
+    int i = low, j = high;
+    if (low < high)
+    {
+        temp = roads[low].w;
+        while (i < j)
+        {
+            temp = roads[low].w;
+            while (i < j && roads[j].w > temp)
+                j--;
+            if (i < j)
+            {
+                roads[i].w = roads[j].w;
+                i++;
+            }
+            while (i < j && roads[i].w < temp)
+                i++;
+            if (i < j)
+            {
+                roads[j].w = roads[i].w;
+                j--;
+            }
+        }
+        roads[i].w = temp;
+        sort(roads, low, i - 1);
+        sort(roads, i + 1, high);
+    }
 }
 
 void Kruskal(MGraph &g, int &sum, Road road[])
@@ -54,7 +87,6 @@ void Kruskal(MGraph &g, int &sum, Road road[])
     sum = 0;
     for (i = 0; i < N; ++i)
         v[i] = i;
-    
 }
 
 Road road[MAXSIZE];
