@@ -1,7 +1,7 @@
 #ifndef _MGRAPH_H_
 #define _MGRAPH_H_
 #include "../common/extra.h"
-#include "AGraph.h"
+
 
 typedef struct
 {
@@ -16,6 +16,7 @@ typedef struct
     VertexType vex[MAXSIZE];     //顶点信息数组
 } MGraph;
 
+void Visit_Node(int );
 void printMG(MGraph *);
-MGraph *AG2MG(AGraph *);
+
 #endif

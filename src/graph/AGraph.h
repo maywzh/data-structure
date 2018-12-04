@@ -1,7 +1,8 @@
-#ifndef _ARCNODE_H_
-#define _ARCNODE_H_
+#ifndef _AGRAPH_H_
+#define _AGRAPH_H_
 #include "../common/extra.h"
 #include "MGraph.h"
+
 typedef struct ArcNode
 {
     int adjvex;       //该边指向的节点的位置
@@ -21,5 +22,5 @@ typedef struct AGraph
 
 void Visit_Node(int);
 void printAG(AGraph *);
-AGraph *MG2AG(MGraph *);
+
 #endif
