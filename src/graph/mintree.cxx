@@ -2,6 +2,7 @@
 #include "mintree.h"
 #include "../sort/sort.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 void Prim(MGraph &g, int v0, int &sum)
 {
@@ -78,6 +79,7 @@ void sort(Road *roads, int low, int high)
     }
 }
 
+Road road[MAXSIZE];
 void Kruskal(MGraph &g, int &sum, Road road[])
 {
     int i;
@@ -87,6 +89,16 @@ void Kruskal(MGraph &g, int &sum, Road road[])
     sum = 0;
     for (i = 0; i < N; ++i)
         v[i] = i;
+    sort(road, 0, E - 1);
+    for (i = 0; i < E; i++)
+    {
+        a = getRoot(road[i].a);
+        b = getRoot(road[i].b);
+        if (a != b)
+        {
+            v[a] = b;
+            sum += road[i].w;
+            printf("%d", i);
+        }
+    }
 }
-
-Road road[MAXSIZE];

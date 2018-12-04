@@ -1,7 +1,8 @@
 #ifndef _MGRAPH_H_
 #define _MGRAPH_H_
-static const int MAXSIZE = 100;
-static const int MAXINT = __INT32_MAX__;
+#include "../common/extra.h"
+#include "AGraph.h"
+
 typedef struct
 {
     int no;    //顶点编号
@@ -16,4 +17,5 @@ typedef struct
 } MGraph;
 
 void printMG(MGraph *);
+MGraph *AG2MG(AGraph *);
 #endif
