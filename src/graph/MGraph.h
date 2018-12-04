@@ -1,6 +1,6 @@
 #ifndef _MGRAPH_H_
 #define _MGRAPH_H_
-const int MAXSIZE = 100;
+static const int MAXSIZE = 100;
 typedef struct
 {
     int no; //顶点编号
