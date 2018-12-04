@@ -1,6 +1,6 @@
 #include "MGraph.h"
 #include <stdio.h>
-void printAG(MGraph *mg)
+void printMG(MGraph *mg)
 {
     printf("n:%d e:%d", mg->n, mg->e);
     for (int i = 0; i < mg->n; i++)

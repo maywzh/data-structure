@@ -1,6 +1,7 @@
 #ifndef _ARCNODE_H_
 #define _ARCNODE_H_
 static const int MAXSIZE = 100;
+static const int MAXINT = __INT32_MAX__;
 typedef struct ArcNode
 {
     int adjvex;       //该边指向的节点的位置

@@ -1,7 +1,7 @@
 #include "AGraph.h"
 #include "MGraph.h"
+#include "mintree.h"
 #include <stdlib.h>
-
 int visit[MAXSIZE];
 
 MGraph *AG2MG(AGraph *ag)
@@ -138,7 +138,3 @@ void bfs(AGraph *g)
             BFS(g, i, visit);
 }
 
-void Prim(MGraph &g, int v0, int &sum)
-{
-    
-}
