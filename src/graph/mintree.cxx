@@ -37,6 +37,24 @@ void Prim(MGraph &g, int v0, int &sum)
     }
 }
 
+int v[MAXSIZE];
+int getRoot(int a)
+{
 
+    while (a != v[a])
+        a = v[a];
+}
+
+void Kruskal(MGraph &g, int &sum, Road road[])
+{
+    int i;
+    int N, E, a, b;
+    N = g.n;
+    E = g.e;
+    sum = 0;
+    for (i = 0; i < N; ++i)
+        v[i] = i;
+    
+}
 
 Road road[MAXSIZE];
