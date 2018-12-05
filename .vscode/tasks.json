@@ -7,7 +7,9 @@
       "label": "make-all",
       "command": "make",
       "type": "process",
-      "args": ["-i"],
+      "args": [
+        "-i"
+      ],
       "problemMatcher": "$gcc",
       "presentation": {
         "echo": true,
@@ -16,13 +18,20 @@
         "panel": "shared",
         "clear": false,
         "showReuseMessage": true
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
       }
     },
     {
       "label": "make clean-all",
       "command": "make",
       "type": "process",
-      "args": ["clean", "-i"],
+      "args": [
+        "clean",
+        "-i"
+      ],
       "problemMatcher": "$gcc",
       "presentation": {
         "echo": true,
@@ -35,7 +44,9 @@
     },
     {
       "label": "make-stack",
-      "options": { "cwd": "src/stack" },
+      "options": {
+        "cwd": "src/stack"
+      },
       "command": "make",
       "type": "shell",
       "args": [],
@@ -49,7 +60,25 @@
     },
     {
       "label": "make-tree",
-      "options": { "cwd": "src/tree" },
+      "options": {
+        "cwd": "src/tree"
+      },
+      "command": "make",
+      "type": "shell",
+      "args": [],
+      "problemMatcher": "$gcc",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "make-sort",
+      "options": {
+        "cwd": "src/sort"
+      },
       "command": "make",
       "type": "shell",
       "args": [],
@@ -65,7 +94,13 @@
       "label": "cxx-tree",
       "command": "gcc",
       "type": "shell",
-      "args": ["src/tree/*.cxx", "-std=c11", "-g", "-o", "src/tree/main"],
+      "args": [
+        "src/tree/*.cxx",
+        "-std=c11",
+        "-g",
+        "-o",
+        "src/tree/main"
+      ],
       "presentation": {
         "echo": true,
         "reveal": "always",

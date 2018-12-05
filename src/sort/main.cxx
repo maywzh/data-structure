@@ -2,9 +2,9 @@
 #include <stdio.h>
 int main()
 {
-    int A[8] = {1, 3, 5, 7, 2, 4, 6, 8};
-    MergeSort(A, 0, 7);
-    for (int i = 0; i < 8; i++)
+    int A[9] = {0, 49, 38, 65, 97, 76, 13, 27, 49};
+    HeapSort(A, 8);
+    for (int i = 1; i < 9; i++)
     {
         printf("%d ", A[i]);
     }
