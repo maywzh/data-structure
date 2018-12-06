@@ -51,17 +51,11 @@ void QuickSort(int R[], int low, int high)
             while (j > i && R[j] > temp)
                 --j;
             if (i < j)
-            {
-                R[i] = R[j];
-                ++i;
-            }
+                R[i++] = R[j];
             while (i < j && R[i] < temp)
                 ++i;
             if (i < j)
-            {
-                R[j] = R[i];
-                --j;
-            }
+                R[j--] = R[i];
         }
         R[i] = temp;
         QuickSort(R, low, i - 1);
@@ -140,7 +134,7 @@ void merge(int *A, int low, int mid, int high)
     else
         while (i <= mid)
             B[k++] = A[i++];
-    for (i = 0; i < high - low + 1;i++)
+    for (i = 0; i < high - low + 1; i++)
         A[low + i] = B[i];
 }
 
