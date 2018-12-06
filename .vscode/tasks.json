@@ -7,9 +7,7 @@
       "label": "make-all",
       "command": "make",
       "type": "process",
-      "args": [
-        "-i"
-      ],
+      "args": ["-i"],
       "problemMatcher": "$gcc",
       "presentation": {
         "echo": true,
@@ -28,10 +26,7 @@
       "label": "make clean-all",
       "command": "make",
       "type": "process",
-      "args": [
-        "clean",
-        "-i"
-      ],
+      "args": ["-i", "clean"],
       "problemMatcher": "$gcc",
       "presentation": {
         "echo": true,
@@ -94,13 +89,7 @@
       "label": "cxx-tree",
       "command": "gcc",
       "type": "shell",
-      "args": [
-        "src/tree/*.cxx",
-        "-std=c11",
-        "-g",
-        "-o",
-        "src/tree/main"
-      ],
+      "args": ["src/tree/*.cxx", "-std=c11", "-g", "-o", "src/tree/main"],
       "presentation": {
         "echo": true,
         "reveal": "always",
