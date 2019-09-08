@@ -29,6 +29,26 @@
       "externalConsole": true,
       "MIMode": "lldb",
       "preLaunchTask": "cxx-stack"
+    },
+    {
+      "name": "launch-sort",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/sort/main",
+      "args": [],
+      "stopAtEntry": true,
+      "cwd": "${workspaceFolder}/src/sort/",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "lldb",
+      "preLaunchTask": "make-sort",
+      // "setupCommands": [
+      //     {
+      //         "description": "Enable pretty-printing for gdb",
+      //         "text": "-enable-pretty-printing",
+      //         "ignoreFailures": true
+      //     }
+      // ]
     }
   ]
 }

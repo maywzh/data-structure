@@ -51,17 +51,11 @@ void QuickSort(int R[], int low, int high)
             while (j > i && R[j] > temp)
                 --j;
             if (i < j)
-            {
-                R[i] = R[j];
-                ++i;
-            }
+                R[i++] = R[j];
             while (i < j && R[i] < temp)
                 ++i;
             if (i < j)
-            {
-                R[j] = R[i];
-                --j;
-            }
+                R[j--] = R[i];
         }
         R[i] = temp;
         QuickSort(R, low, i - 1);
@@ -115,15 +109,13 @@ void HeapSort(int R[], int n)
     int i;
     int temp;
     for (int i = n / 2; i >= 1; i--)
-    {
         Sift(R, i, n);
-    }
     //此时已经完成大顶堆，可以保证
     for (i = n; i >= 2; i--)
     {
         temp = R[i];
         R[i] = R[1];
-        R[1] = R[i];
+        R[1] = temp;
         Sift(R, 1, i - 1); //此刻，i处的数已在正确位置，需要调整交换上去的数
     }
 }
