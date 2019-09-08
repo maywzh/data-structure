@@ -9,7 +9,7 @@ void QuickSort(int[], int, int);
 
 void SelectSort(int[], int);
 
-void merge(int[], int, int, int);
+void Merge(int[], int, int, int);
 
 void MergeSort(int[], int, int);
 
