@@ -66,17 +66,20 @@ void QuickSort(int R[], int low, int high)
 void SelectSort(int R[], int n)
 {
     int tmp, min;
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n - 1; i++)
     {
         min = i;
         for (int j = i + 1; j < n; j++)
-            if (R[i] > R[j])
+            if (R[min] > R[j])
             {
                 min = j;
             }
-        tmp = R[min];
-        R[min] = R[i];
-        R[i] = tmp;
+        if (min != i)
+        {
+            tmp = R[min];
+            R[min] = R[i];
+            R[i] = tmp;
+        }
     }
 }
 
@@ -117,7 +120,7 @@ void HeapSort(int R[], int n)
     }
 }
 
-void merge(int *A, int low, int mid, int high)
+void Merge(int *A, int low, int mid, int high)
 {
     int i = low, j = mid + 1, k = 0;
     int *B = (int *)malloc(sizeof(int) * (high - low + 1));
@@ -145,6 +148,6 @@ void MergeSort(int R[], int low, int high)
         int mid = (low + high) / 2;
         MergeSort(R, low, mid);
         MergeSort(R, mid + 1, high);
-        merge(R, low, mid, high);
+        Merge(R, low, mid, high);
     }
 }
