@@ -2,15 +2,20 @@
   "configurations": [
     {
       "name": "macOS",
-      "includePath": ["/usr/include", "/usr/local/include", "${workspaceRoot}/src/*"],
+      "includePath": [
+        "/usr/local/include",
+        "${workspaceRoot}/src/*"
+      ],
       "defines": [],
       "browse": {
-        "path": ["/usr/include", "/usr/local/include", "${workspaceRoot}/src/*"],
+        "path": [
+          "/usr/local/include",
+          "${workspaceRoot}/src/*"
+        ],
         "limitSymbolsToIncludedHeaders": true,
         "databaseFilename": ""
       },
       "macFrameworkPath": [
-        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks",
         "/System/Library/Frameworks",
         "/Library/Frameworks"
       ],
@@ -34,7 +39,9 @@
         "${workspaceRoot}/build/src/lib",
         "${workspaceRoot}/build/"
       ],
-      "defines": ["_GNU_SOURCE"],
+      "defines": [
+        "_GNU_SOURCE"
+      ],
       "compilerPath": "/usr/bin/clang",
       "intelliSenseMode": "clang-x64",
       "browse": {
@@ -60,7 +67,11 @@
         "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/*",
         "${workspaceRoot}/src/*"
       ],
-      "defines": ["_DEBUG", "UNICODE", "_UNICODE"],
+      "defines": [
+        "_DEBUG",
+        "UNICODE",
+        "_UNICODE"
+      ],
       "intelliSenseMode": "gcc-x64",
       "browse": {
         "path": [
