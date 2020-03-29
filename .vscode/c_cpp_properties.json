@@ -2,16 +2,8 @@
   "configurations": [
     {
       "name": "macOS",
-      "includePath": [
-        "/usr/local/include",
-        "${workspaceRoot}/src/*"
-      ],
       "defines": [],
       "browse": {
-        "path": [
-          "/usr/local/include",
-          "${workspaceRoot}/src/*"
-        ],
         "limitSymbolsToIncludedHeaders": true,
         "databaseFilename": ""
       },
@@ -26,47 +18,18 @@
     },
     {
       "name": "Linux",
-      "includePath": [
-        "/usr/include/c++/7.3.0",
-        "/usr/include/c++/7",
-        "/usr/lib/gcc/x86_64-linux-gnu/7.3.0/include",
-        "/usr/lib/gcc/x86_64-linux-gnu/7.3.0/include-fixed",
-        "/usr/include/c++/7.3.0/backward",
-        "/usr/include",
-        "${workspaceRoot}",
-        "/usr/include/glib-2.0",
-        "${workspaceRoot}/src/*",
-        "${workspaceRoot}/build/src/lib",
-        "${workspaceRoot}/build/"
-      ],
       "defines": [
         "_GNU_SOURCE"
       ],
       "compilerPath": "/usr/bin/clang",
       "intelliSenseMode": "clang-x64",
       "browse": {
-        "path": [
-          "/usr/include/c++/7.3.0",
-          "/usr/include/c++/7",
-          "/usr/lib/gcc/x86_64-linux-gnu/7.3.0/include",
-          "/usr/lib/gcc/x86_64-linux-gnu/7.3.0/include-fixed",
-          "/usr/include/c++/7.3.0/backward",
-          "/usr/include",
-          "${workspaceRoot}"
-        ],
         "limitSymbolsToIncludedHeaders": true,
         "databaseFilename": ""
       }
     },
     {
       "name": "Windows",
-      "includePath": [
-        "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/include",
-        "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/include/*",
-        "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include",
-        "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/*",
-        "${workspaceRoot}/src/*"
-      ],
       "defines": [
         "_DEBUG",
         "UNICODE",
@@ -74,13 +37,6 @@
       ],
       "intelliSenseMode": "gcc-x64",
       "browse": {
-        "path": [
-          "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/include",
-          "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/include/*",
-          "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include",
-          "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/*",
-          "${workspaceRoot}/src/*"
-        ],
         "limitSymbolsToIncludedHeaders": true,
         "databaseFilename": ""
       },
