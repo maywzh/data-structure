@@ -5,6 +5,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "CodeLens (Launch) - MinHeap",
+      "request": "launch",
+      "mainClass": "MinHeap",
+      "projectName": "data-structure_917e65c3"
+    },
+    {
       "name": "launch-tree",
       "type": "cppdbg",
       "request": "launch",
@@ -41,14 +48,7 @@
       "environment": [],
       "externalConsole": true,
       "MIMode": "lldb",
-      "preLaunchTask": "make-sort",
-      // "setupCommands": [
-      //     {
-      //         "description": "Enable pretty-printing for gdb",
-      //         "text": "-enable-pretty-printing",
-      //         "ignoreFailures": true
-      //     }
-      // ]
+      "preLaunchTask": "make-sort"
     }
   ]
 }

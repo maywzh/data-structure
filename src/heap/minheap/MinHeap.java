@@ -1,10 +1,11 @@
 import java.util.Arrays;
+
 /**
- * 最小堆的超简化版实现 Created by wang007 on 2018/6/12.
+ * 最小堆的超简化版实现 Created by maywzh.
  */
 public class MinHeap {
 
-    private int[] values = new int[16];
+    private int[] values = new int[32];
 
     private int size;
 
