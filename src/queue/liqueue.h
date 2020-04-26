@@ -1,5 +1,6 @@
 #ifndef _LIQUEUE_H_
 #define _LIQUEUE_H_
+
 static const int MAXSIZE = 100;
 //链队
 typedef struct QNode

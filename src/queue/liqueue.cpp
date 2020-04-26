@@ -1,5 +1,6 @@
 #include "liqueue.h"
 #include <stdlib.h>
+#include <iostream>
 int isQueueEmpty(LiQueue *lqu)
 {
     return lqu->front == NULL || lqu->rear == NULL ? 1 : 0;
