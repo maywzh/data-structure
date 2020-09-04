@@ -31,10 +31,4 @@ func main() {
 	nums := []int{1, 5, 7, 3, 9, 4, 0}
 	qsort(nums, 0, len(nums)-1)
 	fmt.Println(nums)
-	a := []int{1, 3, 4, 5}
-	b := a
-	fmt.Println(type b)
-	b[0] = 0
-	fmt.Println(copy(b, a))
-	fmt.Println(a[0])
 }
