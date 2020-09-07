@@ -32,6 +32,7 @@ func qsort(nums []int, left, right int, ifrandom bool) {
 		nums[i] = anchor
 		qsort(nums, left, i-1, ifrandom)
 		qsort(nums, i+1, right, ifrandom)
+		
 	}
 }
 
