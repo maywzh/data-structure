@@ -1,3 +1,4 @@
+
 import java.util.Arrays;
 
 /**
@@ -90,7 +91,7 @@ public class MinHeap {
         heap.push(3);
         heap.push(2);
         for (int i = 0; i < 9; i++) {
-            System.out.println(heap.poll());
+            System.out.print(heap.poll() + " ");
         }
     }
 }
